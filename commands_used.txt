@@ -1,0 +1,24 @@
+--This project is focused on laravel api authentication using laravel--
+
+
+---To create a project---
+composer create-project laravel/laravel laravel-passport-auth
+
+--Install passport--
+composer require laravel/passport
+
+-- create tables --
+php artisan migrate
+
+-- generate token keys --
+php artisan passport:install 
+
+
+--create controller and model--
+php artisan make:controller AuthController
+php artisan make:model Post -mcr
+
+
+---Final step---
+php artisan migrate
+php artisan serve
